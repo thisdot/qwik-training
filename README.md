@@ -24,11 +24,7 @@ to start a dev server.
 
 6. How about the `event listener`? Open the dev console tool->Networking, click the button, to demo JS of the button click listener code is only downloaded when user do the action. Also check the downloaded code content to give a brief introduction about the `serialize` implementation (`useLexicalScope()`).
 
-7. Open the dev tool -> Element tab, select root `<html>` node, copy the value as `JSON literial`, open another window and load any static content `http://localhost:5173/src/test.html`. open the dev tool -> element tab, select root `<html>` node, then open the `console tab`, input
-
-```
-$0.innerHTML=<the value copied ealier>
-```
+7. Open the dev tool -> Element tab, select root `<html>` node, copy the value as `string content`, open another window and load any static content `http://localhost:5173/src/test.html`. open the dev tool -> element tab, select root `<html>` node, then mouse right click and select menu item `Edit as HTML`, and paste the value just copied from previous step.
 
 Then you can see the app is displayed there. But click the button, nothing work, since we need to `resume` the state by run the `<script>` in the html, then run the following code.
 
