@@ -1,30 +1,19 @@
 import type { DocumentHead } from '@builder.io/qwik-city'
 import { component$ } from '@builder.io/qwik'
 
-export default component$(() => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const data = {
-    name: 'Qwik',
-    description: DESCRIPTION,
-  }
+interface ItemProps {
+  message: string
+}
 
-  return (
-    <>
-      <input value={data.name} />
-      <br />
-      <textarea rows={10} cols={60}>
-        {data.description}
-      </textarea>
-    </>
-  )
+export default component$(() => {
+  const message = `Insert Greeter component here. By composing components together large applications can be
+      written without putting all of the code into a single file/component.`
+  return <div>Insert Greeter component with props here.</div>
 })
 
-export const DESCRIPTION = `
-Qwik is designed for the fastest possible page load time,
-by delivering pure HTML with near 0 JavaScript for your
-pages to become interactive, regardless of how complex
-your site or app is. It achieves this via resumability
-of code.`
+export const Greeter = component$((props: ItemProps) => {
+  return <div>{props.message}</div>
+})
 
 export const head: DocumentHead = {
   title: 'Welcome to Qwik',
