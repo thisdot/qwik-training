@@ -1,19 +1,10 @@
-import type { DocumentHead } from "@builder.io/qwik-city";
-import { component$, useStore } from "@builder.io/qwik";
+import type { DocumentHead } from '@builder.io/qwik-city'
+import { component$ } from '@builder.io/qwik'
 
 export default component$(() => {
-  const store = useStore({ count: 1 });
-
-  return (
-    <div>
-      <p>Count: {store.count}</p>
-      <p>
-        <button onClick$={() => store.count++}>Click</button>
-      </p>
-    </div>
-  );
-});
+  return <span>{'__put_something_here__'}</span>
+})
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
-};
+  title: 'Welcome to Qwik',
+}
