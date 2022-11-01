@@ -10,10 +10,10 @@ export default component$(() => {
 
   return (
     <>
-      <input value="data.name should go here" />
+      <input value={data.name} />
       <br />
       <textarea rows={10} cols={60}>
-        data.description should go here
+        {data.description}
       </textarea>
     </>
   )
