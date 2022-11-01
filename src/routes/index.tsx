@@ -8,7 +8,11 @@ interface ItemProps {
 export default component$(() => {
   const message = `Insert Greeter component here. By composing components together large applications can be
       written without putting all of the code into a single file/component.`
-  return <div>Insert Greeter component with props here.</div>
+  return (
+    <div>
+      <Greeter message={message} />
+    </div>
+  )
 })
 
 export const Greeter = component$((props: ItemProps) => {
