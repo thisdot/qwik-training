@@ -1,21 +1,39 @@
 import type { DocumentHead } from '@builder.io/qwik-city'
-import { component$, PropFunction } from '@builder.io/qwik'
+import { component$, useStore, useMount$ } from '@builder.io/qwik'
 
-interface CmpButtonProps {
-  onMyClick$?: PropFunction<() => void>
+export const db = {
+  requestUsers: async function (): Promise<User[]> {
+    return Promise.resolve([
+      {
+        name: 'Tom',
+      },
+      {
+        name: 'Jerry',
+      },
+    ])
+  },
 }
 
 export default component$(() => {
+  const store = useStore<{ users: User[] }>({
+    users: [],
+  })
   return (
-    <CmpButton
-      onMyClick$={() => alert('Button Component double clicked')}
-    ></CmpButton>
+    <>
+      {store.users.map((user) => (
+        <User user={user} />
+      ))}
+    </>
   )
 })
 
-export const CmpButton = component$((props: CmpButtonProps) => {
-  return <button onDblclick$={props.onMyClick$}>Double Click</button>
-})
+interface User {
+  name: string
+}
+
+export function User(props: { user: User }) {
+  return <div>Name: {props.user.name}</div>
+}
 
 export const head: DocumentHead = {
   title: 'Welcome to Qwik',
