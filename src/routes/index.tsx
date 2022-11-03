@@ -21,6 +21,12 @@ export const Clock = component$(() => {
     second: 0,
   })
 
+  useClientEffect$(() => {
+    updateClock(store)
+    const tmrId = setInterval(() => updateClock(store), 1000)
+    return () => clearInterval(tmrId)
+  })
+
   return (
     <div class="clock">
       <div class="twelve"></div>
