@@ -5,7 +5,7 @@ export default component$(() => {
   const store = useStore({ x: 0, y: 0 })
   return (
     <div
-      onMouseMove$={(event) => {
+      document:onMouseMove$={(event) => {
         store.x = event.clientX
         store.y = event.clientY
       }}
