@@ -18,6 +18,10 @@ export default component$(() => {
   const store = useStore<{ users: User[] }>({
     users: [],
   })
+  useMount$(async () => {
+    // This code will run on component creation to fetch the data.
+    store.users = await db.requestUsers()
+  })
   return (
     <>
       {store.users.map((user) => (
