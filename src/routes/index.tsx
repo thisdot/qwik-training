@@ -1,43 +1,68 @@
-import type { DocumentHead } from '@builder.io/qwik-city'
-import { component$, useStore, useMount$ } from '@builder.io/qwik'
+import {
+  component$,
+  useStore,
+  useStyles$,
+  useClientEffect$,
+} from '@builder.io/qwik'
+import { DocumentHead } from '@builder.io/qwik-city'
+import styles from './clock.css'
 
-export const db = {
-  requestUsers: async function (): Promise<User[]> {
-    return Promise.resolve([
-      {
-        name: 'Tom',
-      },
-      {
-        name: 'Jerry',
-      },
-    ])
-  },
+interface ClockStore {
+  hour: number
+  minute: number
+  second: number
 }
+export const Clock = component$(() => {
+  useStyles$(styles)
 
-export default component$(() => {
-  const store = useStore<{ users: User[] }>({
-    users: [],
+  const store = useStore<ClockStore>({
+    hour: 0,
+    minute: 0,
+    second: 0,
   })
-  useMount$(async () => {
-    // This code will run on component creation to fetch the data.
-    store.users = await db.requestUsers()
-  })
+
   return (
-    <>
-      {store.users.map((user) => (
-        <User user={user} />
-      ))}
-    </>
+    <div class="clock">
+      <div class="twelve"></div>
+      <div class="three"></div>
+      <div class="six"></div>
+      <div class="nine"></div>
+      <div class="hour" style={{ transform: `rotate(${store.hour}deg)` }}></div>
+      <div
+        class="minute"
+        style={{ transform: `rotate(${store.minute}deg)` }}
+      ></div>
+      <div
+        class="second"
+        style={{ transform: `rotate(${store.second}deg)` }}
+      ></div>
+    </div>
   )
 })
 
-interface User {
-  name: string
+export function updateClock(store: ClockStore) {
+  const now = new Date()
+  store.second = now.getSeconds() * (360 / 60)
+  store.minute = now.getMinutes() * (360 / 60)
+  store.hour = now.getHours() * (360 / 12)
 }
 
-export function User(props: { user: User }) {
-  return <div>Name: {props.user.name}</div>
-}
+export default component$(() => {
+  return (
+    <div>
+      <p>
+        This is an example of Lazy executing code on component when component
+        becomes visible.
+      </p>
+
+      <p style={{ height: '800px' }}>
+        ⬇️ <strong>Scroll down</strong> until the clock is in view.
+      </p>
+
+      <Clock />
+    </div>
+  )
+})
 
 export const head: DocumentHead = {
   title: 'Welcome to Qwik',
