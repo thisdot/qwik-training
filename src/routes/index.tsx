@@ -14,7 +14,7 @@ export default component$(() => {
 })
 
 export const CmpButton = component$((props: CmpButtonProps) => {
-  return <button onDblclick$={}>Double Click</button>
+  return <button onDblclick$={props.onMyClick$}>Double Click</button>
 })
 
 export const head: DocumentHead = {
