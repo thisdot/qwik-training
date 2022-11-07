@@ -3,6 +3,7 @@ import {
   createContext,
   useContextProvider,
   useStore,
+  useContext,
 } from '@builder.io/qwik'
 import { DocumentHead } from '@builder.io/qwik-city'
 
@@ -24,7 +25,8 @@ export default component$(() => {
 
 export const Items = component$(() => {
   // replace this with context retrieval.
-  const todos = { items: [] }
+  const todos = useContext(TodosContext)
+
   return (
     <ul>
       {todos.items.map((item) => (
