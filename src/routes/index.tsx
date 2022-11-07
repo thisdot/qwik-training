@@ -11,16 +11,16 @@ export default component$(() => {
   return (
     <>
       <button onClick$={() => store.count++}>+1</button>
-      <Display count={store.count} />
+      <Display store={store} />
     </>
   )
 })
 
 interface DisplayProps {
-  count: number
+  store: CountStore
 }
 export const Display = component$((props: DisplayProps) => {
-  return <div>The count is: {props.count}</div>
+  return <div>The count is: {props.store.count}</div>
 })
 
 export const head: DocumentHead = {
