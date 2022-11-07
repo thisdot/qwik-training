@@ -2,7 +2,7 @@ import { component$, useStore } from '@builder.io/qwik'
 import { DocumentHead } from '@builder.io/qwik-city'
 
 export default component$(() => {
-  const counter = { count: 0 }
+  const counter = useStore({ count: 0 })
 
   return (
     <>
