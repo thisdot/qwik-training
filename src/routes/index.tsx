@@ -1,26 +1,37 @@
-import { component$, useStore } from '@builder.io/qwik'
+import {
+  component$,
+  createContext,
+  useContextProvider,
+  useStore,
+} from '@builder.io/qwik'
 import { DocumentHead } from '@builder.io/qwik-city'
 
-interface CountStore {
-  count: number
+interface TodosStore {
+  items: string[]
 }
+export const TodosContext = createContext<TodosStore>('Todos')
 
 export default component$(() => {
-  const store = useStore<CountStore>({ count: 0 })
-
-  return (
-    <>
-      <button onClick$={() => store.count++}>+1</button>
-      <Display store={store} />
-    </>
+  useContextProvider(
+    TodosContext,
+    useStore<TodosStore>({
+      items: ['Learn Qwik', 'Build Qwik app', 'Profit'],
+    })
   )
+
+  return <Items />
 })
 
-interface DisplayProps {
-  store: CountStore
-}
-export const Display = component$((props: DisplayProps) => {
-  return <div>The count is: {props.store.count}</div>
+export const Items = component$(() => {
+  // replace this with context retrieval.
+  const todos = { items: [] }
+  return (
+    <ul>
+      {todos.items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  )
 })
 
 export const head: DocumentHead = {
