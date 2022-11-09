@@ -2,26 +2,31 @@ import type { DocumentHead } from '@builder.io/qwik-city'
 import { component$, useStore, Slot } from '@builder.io/qwik'
 
 export default component$(() => {
-    console.log('Render: <App>');
+  console.log('Render: <App>')
   return (
     <Collapsable>
       <div q:slot="closed">▶ (collapsed summary)</div>
       <div q:slot="open">
-        ▼<div> Content that should be displayed when the collapse component is open. </div>
+        ▼
+        <div>
+          {' '}
+          Content that should be displayed when the collapse component is open.{' '}
+        </div>
       </div>
     </Collapsable>
-  );
+  )
 })
 
 export const Collapsable = component$(() => {
-  console.log('Render: <Collapsable>');
-  const store = useStore({ open: true });
+  console.log('Render: <Collapsable>')
+  const store = useStore({ open: true })
   return (
     <div onClick$={() => (store.open = !store.open)}>
       {store.open ? <Slot name="open" /> : `▶`}
       {/* Instead, project content from the parent named "closed" here */}
     </div>
-  );
+  )
+})
 
 export const head: DocumentHead = {
   title: 'Welcome to Qwik',
