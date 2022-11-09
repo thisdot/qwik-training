@@ -22,8 +22,7 @@ export const Collapsable = component$(() => {
   const store = useStore({ open: true })
   return (
     <div onClick$={() => (store.open = !store.open)}>
-      {store.open ? <Slot name="open" /> : `▶`}
-      {/* Instead, project content from the parent named "closed" here */}
+      {store.open ? <Slot name="open" /> : <Slot name="closed" />}
     </div>
   )
 })
