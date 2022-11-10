@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city'
-import { component$ } from '@builder.io/qwik'
+import { component$, useStyles$ } from '@builder.io/qwik'
 
 export const styles = `
 .my-class {
@@ -8,6 +8,7 @@ export const styles = `
 `
 
 export default component$(() => {
+  useStyles$(styles)
   return <span class="my-class"></span>
 })
 
