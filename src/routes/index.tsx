@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city'
-import { component$, useStyles$ } from '@builder.io/qwik'
+import { component$, useStylesScoped$ } from '@builder.io/qwik'
 
 export const styles = `
 span {
@@ -8,7 +8,7 @@ span {
 `
 
 export default component$(() => {
-  useStyles$(styles)
+  useStylesScoped$(styles)
   return <span>Parent</span>
 })
 
