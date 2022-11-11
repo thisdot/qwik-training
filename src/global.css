@@ -123,7 +123,3 @@ a.mindblow:hover {
   margin-bottom: 4px;
   transform: translateY(4px);
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
