@@ -1,19 +1,21 @@
 import type { DocumentHead } from '@builder.io/qwik-city'
-import { component$, useStylesScoped$ } from '@builder.io/qwik'
-
-export const styles = `
-span {
-  color: red;
-}
-`
+import { component$, useStore } from '@builder.io/qwik'
 
 export default component$(() => {
-  useStylesScoped$(styles)
   return <span>Parent</span>
 })
 
-export const Child = component$(() => {
-  return <span>Child</span>
+export const Count = component$(() => {
+  const store = useStore({ count: 0 })
+
+  return (
+    <div>
+      <p>Count: {store.count}</p>
+      <p>
+        <button onClick$={() => store.count++}>Click</button>
+      </p>
+    </div>
+  )
 })
 
 export const head: DocumentHead = {
