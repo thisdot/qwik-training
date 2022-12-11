@@ -1,11 +1,11 @@
 import { component$ } from '@builder.io/qwik'
-import { LinkHeader } from '../../../../components/link/LinkHeader'
 
 /*
   Exercises 2-1
   Basic binding expressions.
 
   - Exercise step: Use `{}` to display `data.expression` to the textarea in the template.
+  - Answer: Use `{data.description}` to display `data.description` in the template.
 */
 export default component$(() => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -16,14 +16,6 @@ export default component$(() => {
 
   return (
     <>
-      <LinkHeader
-        linkMetas={[
-          { href: '/', label: 'Home' },
-          { href: '/exercises/module2', label: 'Module 2: Component Basic' },
-        ]}
-      ></LinkHeader>
-      <input value="data.name should go here" />
-      <br />
       <textarea rows={10} cols={60}>
         // data.description should go here
       </textarea>

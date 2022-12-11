@@ -1,7 +1,5 @@
-import { Link } from '@builder.io/qwik-city'
 import { component$ } from '@builder.io/qwik'
 import { NavItem } from '../../../components/link/NavItem'
-import { LinkHeader } from '../../../components/link/LinkHeader'
 
 export const exercises = [
   {
@@ -22,10 +20,6 @@ export default component$(() => {
   return (
     <>
       <div>
-        <LinkHeader linkMetas={[{ href: '/', label: 'Home' }]}></LinkHeader>
-        <span>Module 2: component basic</span>
-      </div>
-      <div>
         <ul>
           {exercises.map((exercise) => (
             <NavItem
@@ -34,6 +28,7 @@ export default component$(() => {
             ></NavItem>
           ))}
         </ul>
+        <br />
       </div>
     </>
   )
