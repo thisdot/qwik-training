@@ -6,5 +6,5 @@ import { component$ } from '@builder.io/qwik'
   - Exercise step: Add handler to button
 */
 export default component$(() => {
-  return <button>Click Me</button>
+  return <button onClick$={() => alert('Hello World!')}>Click Me</button>
 })
