@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik'
+import { component$, useStyles$ } from '@builder.io/qwik'
 
 export const styles = `
 .my-class {
@@ -10,5 +10,6 @@ export const styles = `
  * Exercise 6-1: use useStyles$() to apply the styles.
  */
 export default component$(() => {
-  return <span class="my-class"></span>
+  useStyles$(styles)
+  return <span class="my-class">Test data</span>
 })

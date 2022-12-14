@@ -9,7 +9,14 @@ export default component$(() => {
    * Exercise 4-5: track input change and trigger fetch query from github
    * with useResource$().
    */
-  const reposResource = useResource$<string[]>(({ track, cleanup }) => {})
+  const reposResource = useResource$<string[]>(({ track, cleanup }) => {
+    track(() => github.org)
+
+    const controller = new AbortController()
+    cleanup(() => controller.abort())
+
+    return getRepositories(github.org, controller)
+  })
 
   console.log('Render')
   return (
