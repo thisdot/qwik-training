@@ -8,6 +8,7 @@ export default component$(() => {
   return (
     <a
       href="/"
+      preventdefault:click
       onClick$={() => alert('do something other than navigate to home.')}
     >
       click me!

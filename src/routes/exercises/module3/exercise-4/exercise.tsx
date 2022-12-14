@@ -17,5 +17,5 @@ export default component$(() => {
  * to implement custom event listener.
  */
 export const CmpButton = component$((props: CmpButtonProps) => {
-  return <button>Double Click</button>
+  return <button onDblclick$={props.onMyClick$}>Double Click</button>
 })

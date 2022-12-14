@@ -11,7 +11,14 @@ export default component$(() => {
    *
    * You should add your code here`
    */
-  const reposResource = useResource$<string[]>(({ track, cleanup }) => {})
+  const reposResource = useResource$<string[]>(({ track, cleanup }) => {
+    track(() => github.org)
+
+    const controller = new AbortController()
+    cleanup(() => controller.abort())
+
+    return getRepositories(github.org, controller)
+  })
 
   console.log('Render')
   return (

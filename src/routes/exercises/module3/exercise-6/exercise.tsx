@@ -1,4 +1,9 @@
-import { component$, useStore, useStyles$ } from '@builder.io/qwik'
+import {
+  component$,
+  useStore,
+  useStyles$,
+  useClientEffect$,
+} from '@builder.io/qwik'
 import styles from './clock.css'
 
 /**
@@ -16,6 +21,12 @@ export const Clock = component$(() => {
     hour: 0,
     minute: 0,
     second: 0,
+  })
+
+  useClientEffect$(() => {
+    updateClock(store)
+    const tmrId = setInterval(() => updateClock(store), 1000)
+    return () => clearInterval(tmrId)
   })
 
   return (

@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from '@builder.io/qwik'
+import { component$, useStylesScoped$ } from '@builder.io/qwik'
 
 export const styles = `
 span {
@@ -10,8 +10,14 @@ span {
  * Exercise 6-2: use useStylesScope$() to apply the styles only to the Parent component.
  */
 export default component$(() => {
-  useStyles$(styles)
-  return <span>Parent</span>
+  useStylesScoped$(styles)
+  return (
+    <>
+      <span>Parent</span>
+      <br />
+      <Child></Child>
+    </>
+  )
 })
 
 export const Child = component$(() => {

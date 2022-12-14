@@ -18,7 +18,7 @@ export default component$(() => {
       <textarea
         rows={10}
         cols={60}
-        value="data.description should go here"
+        value={data.description}
       ></textarea>
     </>
   )

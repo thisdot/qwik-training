@@ -7,7 +7,7 @@ export default component$(() => {
    */
   return (
     <div
-      onMouseMove$={(event) => {
+      document:onMouseMove$={(event) => {
         store.x = event.clientX
         store.y = event.clientY
       }}
