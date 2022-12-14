@@ -3,7 +3,6 @@ import { component$ } from '@builder.io/qwik'
 /*
   Exercises 2-1
   Basic binding expressions.
-
   - Exercise step: Use `{}` to display `data.expression` to the textarea in the template.
   - Answer: Use `{data.description}` to display `data.description` in the template.
 */
@@ -17,7 +16,7 @@ export default component$(() => {
   return (
     <>
       <textarea rows={10} cols={60}>
-        {data.description}
+        // data.description should go here
       </textarea>
     </>
   )

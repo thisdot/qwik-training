@@ -4,8 +4,8 @@ import { ExerciseLayout } from '../../../components/exercise/layout'
 export default component$(() => {
   return (
     <ExerciseLayout
-      module="module2"
-      label="Module2: Component basic"
+      module="module6"
+      label="Module7: Unit test"
     ></ExerciseLayout>
   )
 })

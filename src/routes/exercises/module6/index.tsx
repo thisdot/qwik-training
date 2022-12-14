@@ -4,18 +4,14 @@ import { ExerciseList } from '../../../components/exercise/exercise'
 export const exercises = [
   {
     idx: 1,
-    label: 'Exercise1: Binding expression',
+    label: 'Exercise1: useStyles$()',
   },
   {
     idx: 2,
-    label: 'Exercise2: Props',
-  },
-  {
-    idx: 3,
-    label: 'Exercise3: Event Listener',
+    label: 'Exercise2: useStylesScope$()',
   },
 ]
 
 export default component$(() => {
-  return <ExerciseList exercises={exercises} module="module2"></ExerciseList>
+  return <ExerciseList exercises={exercises} module="module6"></ExerciseList>
 })
