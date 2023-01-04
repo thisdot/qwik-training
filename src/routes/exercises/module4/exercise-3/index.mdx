@@ -5,9 +5,15 @@ title: Access todo data provided with useContext()
 
 import Exercise from './exercise'
 
+Passing store data from parent component to child component is straightforward,
+but if you have components with deep nested relationships, passing data through Props
+will become hard and not effective (since the pass through components doesn’t really use these props).
+
+Qwik provides context to allow the parent component pass data to the children component.
+
 ## Exercise 4-3:
 
 1. Open src/routes/exercises/module4/exercise-3/exercise.tsx
-2. Access todo data provided with useContext()
+2. Access todo data provided with `useContext()`
 
 <Exercise />

@@ -5,12 +5,12 @@ import { component$ } from '@builder.io/qwik'
  */
 
 export default component$(() => {
-  const counter = { count: 0 }
+  const counter = 0
 
   return (
     <>
-      <div>Count: {counter.count}</div>
-      <button onClick$={() => counter.count++}>+1</button>
+      <div>Count: {counter}</div>
+      <button onClick$={() => counter}>+1</button>
     </>
   )
 })

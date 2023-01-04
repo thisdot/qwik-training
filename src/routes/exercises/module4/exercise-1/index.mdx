@@ -5,9 +5,17 @@ title: Binding expression
 
 import Exercise from './exercise'
 
-## Exercise 3-1:
+Qwik provides a built in reactive state manage mechanism, we can call useSignal()/useStore() method to create a reactive state and use the state in the JSX template.
 
-1. Open src/routes/exercises/module3/exercise-1/exercise.tsx
+- useSignal() create primitive reactive value.
+- useStore() create an Object reactive value, which internally creates several nested signal reactive value.
+
+The state of Qwik is not component state, you can call useSignal() anywhere in your application.
+The state created by useSignal()/useStore() is reactive. That means if the state is updated, all impacted components will be rendered automatically if needed.
+
+## Exercise 4-1:
+
+1. Open src/routes/exercises/module4/exercise-1/exercise.tsx
 2. Use useStore() to hold the component data.
 
 <Exercise />

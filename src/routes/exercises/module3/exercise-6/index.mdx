@@ -5,9 +5,15 @@ title: Binding expression
 
 import Exercise from './exercise'
 
-## Exercise 3-1:
+## useClientEffects$()
 
-1. Open src/routes/exercises/module3/exercise-1/exercise.tsx
-2. Change mouseMove to global event listener
+- useClientEffects$() executes code after the component is resumed. The code will only run in the client side.
+- useClientEffects$() get a callback function and will run when the component resumes from the pause point from the server.
+- You need to return a cleanup function so when the component is destroyed the cleanup function will be executed to cleanup all resource initialized in the useClientEffects$() hook.
+
+## Exercise 3-6:
+
+1. Open src/routes/exercises/module3/exercise-6/exercise.tsx
+2. use useClientEffects$() to schedule an interval only in the client side
 
 <Exercise />

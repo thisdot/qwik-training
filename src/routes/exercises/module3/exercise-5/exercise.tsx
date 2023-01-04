@@ -1,4 +1,4 @@
-import { component$, useStore, useMount$ } from '@builder.io/qwik'
+import { component$, useStore } from '@builder.io/qwik'
 
 export const db = {
   requestUsers: async function (): Promise<User[]> {

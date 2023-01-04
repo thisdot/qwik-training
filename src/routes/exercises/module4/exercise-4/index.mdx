@@ -5,9 +5,19 @@ title: implement computed value with useWatch$()
 
 import Exercise from './exercise'
 
+Qwik also support computed value.
+Computed value means when you want to have some value calculated based on other value (the other value mostly from the props).
+For example, you have a `first name` and `last name` from the component props, and you want to have a `full name` value
+calculated based on the `first name` and the `last name` value, you can create a computed value, many frameworks support
+computed value, Qwik also support this feature.
+There are two ways to create computed value
+
+- useTask$()
+- useResource$()
+
 ## Exercise 4-4:
 
 1. Open src/routes/exercises/module4/exercise-4/exercise.tsx
-2. Access todo data provided with useContext()
+2. monitor `state.count` update with `useTask$()`
 
 <Exercise />
