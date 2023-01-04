@@ -14,7 +14,7 @@ export default component$(() => {
     delayCount: 0,
   })
   console.log('Render: <App>')
-  useWatch$(({ track }) => {
+  useTask$(({ track }) => {
     track(() => store.count)
     const id = setTimeout(() => (store.delayCount = store.count), 2000)
     return () => clearTimeout(id)
