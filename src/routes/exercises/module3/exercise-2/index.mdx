@@ -5,9 +5,14 @@ title: Prevent Event Listener
 
 import Exercise from './exercise'
 
+Another common use case is to prevent the default behavior of the event listener,
+for example, you have an event listener for a href element, and after the event listener
+you want to cancel the default behavior so the browser will continue to navigate to the href location.
+You can use a specified preventdefault:eventName attribute to the element.
+
 ## Exercise 3-2:
 
 1. Open src/routes/exercises/module3/exercise-2/exercise.tsx
-2. Change onClick to preventDefault event listener
+2. Change onClick to add a preventDefault event listener
 
 <Exercise />

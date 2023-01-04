@@ -5,9 +5,15 @@ title: Fetch data before render the component
 
 import Exercise from './exercise'
 
+`useTask$()` will be triggered
+
+1. When the component is first rendered.
+2. Or the tracked state changes.
+   And useTask$() may run on Server side or Browser side depends on when the component is first rendered.
+
 ## Exercise 3-5:
 
 1. Open src/routes/exercises/module3/exercise-5/exercise.tsx
-2. Fetch data before render the component
+2. Fetch data before render the component in `useTask$()` lifecycle hook
 
 <Exercise />

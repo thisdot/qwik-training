@@ -1,4 +1,4 @@
-import { component$, useStore, useMount$ } from '@builder.io/qwik'
+import { component$, useStore, useTask$ } from '@builder.io/qwik'
 
 export const db = {
   requestUsers: async function (): Promise<User[]> {
@@ -20,7 +20,7 @@ export default component$(() => {
   const store = useStore<{ users: User[] }>({
     users: [],
   })
-  useMount$(async () => {
+  useTask$(async () => {
     // This code will run on component creation to fetch the data.
     store.users = await db.requestUsers()
   })

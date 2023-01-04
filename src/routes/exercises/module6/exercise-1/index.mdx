@@ -5,6 +5,10 @@ title: use useStyles$() to apply the styles.
 
 import Exercise from './exercise'
 
+In qwik, you can load global styles and the style will be applied to the whole application.
+But don’t include all styles especially the component style into the global css file.
+Since the global style is downloaded eagerly even when the component is not visible.
+
 ## Exercise 6-1:
 
 1. Open src/routes/exercises/module6/exercise-1/exercise.tsx

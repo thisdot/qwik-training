@@ -5,6 +5,14 @@ title: Pass state to the DisplayProps component
 
 import Exercise from './exercise'
 
+Qwik provides a built in reactive state manage mechanism, we can call useSignal()/useStore() method to create a reactive state and use the state in the JSX template.
+
+- useSignal() create primitive reactive value.
+- useStore() create an Object reactive value, which internally creates several nested signal reactive value.
+
+The state of Qwik is not component state, you can call useSignal() anywhere in your application.
+The state created by useSignal()/useStore() is reactive. That means if the state is updated, all impacted components will be rendered automatically if needed.
+
 ## Exercise 4-2:
 
 1. Open src/routes/exercises/module4/exercise-2/exercise.tsx

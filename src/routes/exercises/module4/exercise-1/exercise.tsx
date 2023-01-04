@@ -1,15 +1,15 @@
-import { component$, useStore } from '@builder.io/qwik'
+import { component$, useSignal } from '@builder.io/qwik'
 
 /**
  * Exercise 4-1: use useStore() to holde the counter data.
  */
 
 export default component$(() => {
-  const counter = useStore({ count: 0 })
+  const counter = useSignal(0)
   return (
     <>
-      <div>Count: {counter.count}</div>
-      <button onClick$={() => counter.count++}>+1</button>
+      <div>Count: {counter.value}</div>
+      <button onClick$={() => counter.value++}>+1</button>
     </>
   )
 })

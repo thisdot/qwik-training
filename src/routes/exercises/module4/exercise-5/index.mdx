@@ -5,6 +5,10 @@ title: Track input change and trigger fetch query from github
 
 import Exercise from './exercise'
 
+We usually use useTask$() to update some intermediate state, if we want to watch some input and render the template directly,
+we can use useResource$(), useResource$() is asynchronous and can run multiple asynchronous operations parallelly.
+The common use case is to fetch some data from the server and render the template.
+
 ## Exercise 4-5:
 
 1. Open src/routes/exercises/module4/exercise-5/exercise.tsx
