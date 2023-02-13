@@ -44,7 +44,11 @@ export default component$(() => {
       <div>
         <ul>
           {modules.map((module) => (
-            <NavItem href={module.href} label={module.label}></NavItem>
+            <NavItem
+              href={module.href}
+              label={module.label}
+              key={module.key || module.label}
+            ></NavItem>
           ))}
         </ul>
       </div>

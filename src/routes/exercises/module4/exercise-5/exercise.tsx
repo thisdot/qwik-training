@@ -8,6 +8,8 @@ export default component$(() => {
   /**
    * Exercise 4-5: track input change and trigger fetch query from github
    * with useResource$().
+   *
+   * You should add your code here
    */
   const reposResource = useResource$<string[]>(({ track, cleanup }) => {
     track(() => github.org)
