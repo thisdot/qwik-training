@@ -6,7 +6,7 @@ interface AppStore {
 }
 
 /**
- * Exercise 4-4: implement computed value with useWatch$()
+ * Exercise 4-4: implement computed value with useTask$()
  */
 export default component$(() => {
   const store = useStore<AppStore>({

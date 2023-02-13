@@ -19,7 +19,7 @@ test(`[ExampleTest Component]: Should render 💣`, async () => {
 })
 
 /**
- * Exercise 7-1: Unit test
+ * Exercise 7-2: Unit test
  */
 test(`[ExampleTest Component]: Click counter +1`, async () => {
   const { screen, render, userEvent } = await createDOM()

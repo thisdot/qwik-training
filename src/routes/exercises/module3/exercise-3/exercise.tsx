@@ -1,4 +1,4 @@
-import { component$, useStore } from '@builder.io/qwik'
+import { component$ } from '@builder.io/qwik'
 
 /**
  * Exercise 3-3: Add a click event listener programmatically

@@ -1,4 +1,4 @@
-import { component$, useStore } from '@builder.io/qwik'
+import { component$ } from '@builder.io/qwik'
 
 /**
  * Exercise 4-2: Pass state to the DisplayProps component
@@ -8,7 +8,7 @@ interface CountStore {
 }
 
 export default component$(() => {
-  const store = useStore<CountStore>({ count: 0 })
+  const store = { count: 0 }
 
   return (
     <>
