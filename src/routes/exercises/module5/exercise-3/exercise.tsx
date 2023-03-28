@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik'
+import { component$, Slot } from '@builder.io/qwik'
 
 /**
  * Exercise 5-3: Show default content if parent component doesn't pass content
