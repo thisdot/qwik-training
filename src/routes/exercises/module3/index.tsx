@@ -24,7 +24,7 @@ export const exercises = [
   },
   {
     idx: 6,
-    label: 'Exercise 6: useClientEffect$ to initialize a timer',
+    label: 'Exercise 6: useVisibleTask$ to initialize a timer',
   },
 ]
 

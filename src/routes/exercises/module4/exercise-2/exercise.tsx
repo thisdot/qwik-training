@@ -1,26 +1,23 @@
-import { component$ } from '@builder.io/qwik'
+import { component$, useStore } from '@builder.io/qwik'
 
 /**
  * Exercise 4-2: Pass state to the DisplayProps component
  */
 interface CountStore {
-  count: number
+  store: { count: number }
 }
 
 export default component$(() => {
-  const store = { count: 0 }
+  const store = useStore({ count: 0 })
 
   return (
     <>
       <button onClick$={() => store.count++}>+1</button>
-      <Display count={store.count} />
+      <Display store={store} />
     </>
   )
 })
 
-interface DisplayProps {
-  count: number
-}
-export const Display = component$((props: DisplayProps) => {
-  return <div>The count is: {props.count}</div>
+export const Display = component$<CountStore>(({ store }) => {
+  return <div>The count is: {store.count}</div>
 })

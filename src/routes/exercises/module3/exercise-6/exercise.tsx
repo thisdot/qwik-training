@@ -2,9 +2,9 @@ import {
   component$,
   useStore,
   useStyles$,
-  useClientEffect$,
+  useVisibleTask$,
 } from '@builder.io/qwik'
-import styles from './clock.css'
+import styles from './clock.css?inline'
 
 /**
  * Exercise 3-6: use useVisibleTask$ to initialize a timer.
@@ -23,7 +23,7 @@ export const Clock = component$(() => {
     second: 0,
   })
 
-  useClientEffect$(() => {
+  useVisibleTask$(() => {
     updateClock(store)
     const tmrId = setInterval(() => updateClock(store), 1000)
     return () => clearInterval(tmrId)
