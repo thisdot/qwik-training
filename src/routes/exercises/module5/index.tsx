@@ -4,15 +4,15 @@ import { ExerciseList } from '../../../components/exercise/exercise'
 export const exercises = [
   {
     idx: 1,
-    label: 'Exercise1: Unnamed slot',
+    label: 'Exercise 1: Unnamed slot',
   },
   {
     idx: 2,
-    label: 'Exercise2: Named slots',
+    label: 'Exercise 2: Named slots',
   },
   {
     idx: 3,
-    label: 'Exercise3: Default content',
+    label: 'Exercise 3: Default content',
   },
 ]
 

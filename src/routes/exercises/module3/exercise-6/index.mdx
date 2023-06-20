@@ -5,15 +5,15 @@ title: Binding expression
 
 import Exercise from './exercise'
 
-## useClientEffects$()
+## useVisibleTask$()
 
-- useClientEffects$() executes code after the component is resumed. The code will only run in the client side.
-- useClientEffects$() get a callback function and will run when the component resumes from the pause point from the server.
-- You need to return a cleanup function so when the component is destroyed the cleanup function will be executed to cleanup all resource initialized in the useClientEffects$() hook.
+- useVisibleTask$() executes code after the component is resumed. The code will only run in the client side.
+- useVisibleTask$() get a callback function and will run when the component resumes from the pause point from the server.
+- You need to return a cleanup function so when the component is destroyed the cleanup function will be executed to cleanup all resource initialized in the useVisibleTask$() hook.
 
 ## Exercise 3-6:
 
 1. Open src/routes/exercises/module3/exercise-6/exercise.tsx
-2. use useClientEffects$() to schedule an interval only in the client side
+2. use useVisibleTask$() to schedule an interval only in the client side
 
 <Exercise />

@@ -15,9 +15,11 @@ export default component$(() => {
 
   return (
     <>
-      <textarea rows={10} cols={60}>
-        // data.description should go here
-      </textarea>
+      <textarea
+        rows={10}
+        cols={60}
+        value="data.description should go here"
+      ></textarea>
     </>
   )
 })

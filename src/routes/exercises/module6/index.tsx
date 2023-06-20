@@ -4,11 +4,11 @@ import { ExerciseList } from '../../../components/exercise/exercise'
 export const exercises = [
   {
     idx: 1,
-    label: 'Exercise1: useStyles$()',
+    label: 'Exercise 1: useStyles$()',
   },
   {
     idx: 2,
-    label: 'Exercise2: useStylesScope$()',
+    label: 'Exercise 2: useStylesScope$()',
   },
 ]
 

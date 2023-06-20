@@ -4,27 +4,27 @@ import { ExerciseList } from '../../../components/exercise/exercise'
 export const exercises = [
   {
     idx: 1,
-    label: 'Exercise1: Global event listener',
+    label: 'Exercise 1: Global event listener',
   },
   {
     idx: 2,
-    label: 'Exercise2: PreventDefault event listener',
+    label: 'Exercise 2: PreventDefault event listener',
   },
   {
     idx: 3,
-    label: 'Exercise3: Programmatically event listener',
+    label: 'Exercise 3: Programmatically event listener',
   },
   {
     idx: 4,
-    label: 'Exercise4: Create a custom event',
+    label: 'Exercise 4: Create a custom event',
   },
   {
     idx: 5,
-    label: 'Exercise5: fetch data before render the component',
+    label: 'Exercise 5: fetch data before render the component',
   },
   {
     idx: 6,
-    label: 'Exercise6: useClientEffect$ to initialize a timer',
+    label: 'Exercise 6: useClientEffect$ to initialize a timer',
   },
 ]
 

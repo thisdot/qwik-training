@@ -2,7 +2,7 @@ import { component$, useStore, useStyles$ } from '@builder.io/qwik'
 import styles from './clock.css'
 
 /**
- * Exercise 3-6: use useClientEffect$ to initialize a timer.
+ * Exercise 3-6: use useVisibleTask$ to initialize a timer.
  */
 interface ClockStore {
   hour: number

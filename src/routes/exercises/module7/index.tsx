@@ -4,11 +4,11 @@ import { ExerciseList } from '../../../components/exercise/exercise'
 export const exercises = [
   {
     idx: 1,
-    label: 'Exercise1: Render Test',
+    label: 'Exercise 1: Render Test',
   },
   {
     idx: 2,
-    label: 'Exercise2: Event Test',
+    label: 'Exercise 2: Event Test',
   },
 ]
 

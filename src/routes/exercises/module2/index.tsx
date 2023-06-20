@@ -4,15 +4,15 @@ import { ExerciseList } from '../../../components/exercise/exercise'
 export const exercises = [
   {
     idx: 1,
-    label: 'Exercise1: Binding expression',
+    label: 'Exercise 1: Binding expression',
   },
   {
     idx: 2,
-    label: 'Exercise2: Props',
+    label: 'Exercise 2: Props',
   },
   {
     idx: 3,
-    label: 'Exercise3: Event Listener',
+    label: 'Exercise 3: Event Listener',
   },
 ]
 
