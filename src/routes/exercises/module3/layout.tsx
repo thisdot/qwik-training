@@ -5,7 +5,7 @@ export default component$(() => {
   return (
     <ExerciseLayout
       module="module3"
-      label="Module3: Advanced Component"
+      label="Module 3: Advanced Components"
     ></ExerciseLayout>
   )
 })

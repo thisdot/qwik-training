@@ -1,36 +1,36 @@
-import { DocumentHead, Link } from '@builder.io/qwik-city'
+import { DocumentHead } from '@builder.io/qwik-city'
 import { component$ } from '@builder.io/qwik'
 import { NavItem } from '../components/link/NavItem'
 
 export const modules = [
   {
     href: '/exercises/module2',
-    label: 'Module2: Component Basic',
+    label: 'Module 2: Component Basics',
     key: 'Module2',
   },
   {
     href: '/exercises/module3',
-    label: 'Module3: Advanced Component',
+    label: 'Module 3: Advanced Components',
     key: 'Module3',
   },
   {
     href: '/exercises/module4',
-    label: 'Module4: State management',
+    label: 'Module 4: State Management',
     key: 'Module4',
   },
   {
     href: '/exercises/module5',
-    label: 'Module5: Project Injection',
+    label: 'Module 5: Content Projection',
     key: 'Module5',
   },
   {
     href: '/exercises/module6',
-    label: 'Module6: Styles',
+    label: 'Module 6: Styles',
     key: 'Module6',
   },
   {
     href: '/exercises/module7',
-    label: 'Module7: Unit test',
+    label: 'Module 7: Unit Testing',
     key: 'Module7',
   },
 ]

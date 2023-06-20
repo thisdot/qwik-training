@@ -5,7 +5,7 @@ export default component$(() => {
   return (
     <ExerciseLayout
       module="module5"
-      label="Module5: Project injection"
+      label="Module 5: Content Projection"
     ></ExerciseLayout>
   )
 })

@@ -1,6 +1,6 @@
 import {
   component$,
-  createContext,
+  createContextId,
   useContextProvider,
   useStore,
 } from '@builder.io/qwik'
@@ -8,7 +8,7 @@ import {
 interface TodosStore {
   items: string[]
 }
-export const TodosContext = createContext<TodosStore>('Todos')
+export const TodosContext = createContextId<TodosStore>('Todos')
 
 export default component$(() => {
   useContextProvider(

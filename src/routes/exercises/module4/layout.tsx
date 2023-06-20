@@ -5,7 +5,7 @@ export default component$(() => {
   return (
     <ExerciseLayout
       module="module4"
-      label="Module4: State management"
+      label="Module 4: State Management"
     ></ExerciseLayout>
   )
 })

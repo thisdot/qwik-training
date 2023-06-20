@@ -5,7 +5,7 @@ export default component$(() => {
   return (
     <ExerciseLayout
       module="module7"
-      label="Module7: Unit test"
+      label="Module 7: Unit Testing"
     ></ExerciseLayout>
   )
 })
