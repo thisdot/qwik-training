@@ -57,9 +57,12 @@ test(`[ExampleTest Component]: Click counter +1`, async () => {
   const input = screen.querySelector('.input-counter') as HTMLInputElement
 
   // trigger input event with value 50
+  await userEvent(input, 'input', { target: { value: '50' } })
 
   expect(spanBefore.innerHTML).toEqual('Count:50')
 
   const spanAfter = screen.querySelector('span') as HTMLDivElement
   // click count button and check the count result
+  await userEvent(screen.querySelector('button') as HTMLButtonElement, 'click')
+  expect(spanAfter.innerHTML).toEqual('Count:51')
 })
