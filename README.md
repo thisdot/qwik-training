@@ -21,7 +21,7 @@
 | Advanced Component | Exercise 3-3: Programmatic listener                 |
 | Advanced Component | Exercise 3-4: Custom Event                          |
 | Advanced Component | Exercise 3-5: useTask$() lifecycle hook             |
-| Advanced Component | Exercise 3-6: useClientEffect$() lifecycle hook     |
+| Advanced Component | Exercise 3-6: useVisibleTask$() lifecycle hook     |
 | State Management   | Exercise 4-1: useSignal()                           |
 | State Management   | Exercise 4-2: useStore()                            |
 | State Management   | Exercise 4-3: useContext()                          |
